@@ -1,0 +1,50 @@
+.product-card-wrapper {
+  font-family: "Montserrat", sans-serif;
+}
+
+.product-card {
+  background-color: #F7F7FA;
+}
+
+.product-card__img {
+
+}
+.prouct-card__for-skin {
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  line-height: 24px;
+  color: #A5A3B9;
+
+}
+.prouct-card__name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #515076;
+}
+
+.prouct-card__descr {
+  font-size: 13px;
+  line-height: 18px;
+  color: #515076;
+}
+
+.prouct-card__list {
+  font-size: 13px;
+  line-height: 18px;
+  color: #515076;
+}
+
+.prouct-card__elem {
+  list-style-type: circle;
+}
+
+.prouct-card__price {
+  font-size: 20px;
+  line-height: 24px;
+  color: #515076;
+}
+
+.prouct-card__price-text {
+  font-weight: 700;
+}

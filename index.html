@@ -3,24 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
   <title>Product card</title>
 </head>
 <body>
-  <div>
-    <img src="images/moisturizing-mousse.png" alt="Увлажняющий мусс" width="290" height="245">
-    <p>Для нормальной кожи</p>
-    <h3>Увлажняющий мусс</h3>
-    <p>Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой. </p>
-    <p>Состав:</p>
-    <ul>
-      <li type="circle">активные натуральные комплексы</li>
-      <li type="circle">витамины С, А, РР, В И Е</li>
-      <li type="circle">солнцезащитные компоненты</li>
-    </ul>
-    <div>
-      <span>Цена</span>
-      <span>2 750 &#8381</span>
+  <div class="product-card-wrapper">
+    <div class="prouct-card">
+      <img class="prouct-card__img" src="images/moisturizing-mousse.png" alt="Увлажняющий мусс" width="290" height="245">
+      <p class="prouct-card__for-skin">Для нормальной кожи</p>
+      <h3 class="prouct-card__name">Увлажняющий мусс</h3>
+      <p class="prouct-card__descr">Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.</p>
+      <ul class="prouct-card__list">
+        <span>Состав:</span>
+        <li class="prouct-card__elem">активные натуральные комплексы</li>
+        <li class="prouct-card__elem">витамины С, А, РР, В И Е</li>
+        <li class="prouct-card__elem">солнцезащитные компоненты</li>
+      </ul>
+      <div class="prouct-card__price">
+        <span class="prouct-card__price-text">Цена</span>
+        <span>2 750 &#8381</span>
+      </div>
     </div>
+
+
   </div>
 </body>
 </html>
