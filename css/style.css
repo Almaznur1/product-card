@@ -3,6 +3,7 @@ body {
   background-image: url(/images/background.png);
   background-repeat: no-repeat;
   background-position-x: 85px;
+  
 }
 
 .headline {
@@ -11,7 +12,8 @@ body {
   font-weight: 400;
   display: flex;
   justify-content: center;
-  margin: 220px 0 110px;
+  text-align: center;
+  margin: 220px 0 110px 85px;;
 
 color: #515076;
 }
@@ -21,6 +23,8 @@ color: #515076;
   justify-content: center;
   gap: 45px;
   flex-wrap: wrap;
+  max-width: 1110px;
+  margin-left: 85px;
 }
 
 .product-card {
