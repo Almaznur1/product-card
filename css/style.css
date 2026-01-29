@@ -1,5 +1,8 @@
 body {
   font-family: "Montserrat", sans-serif;
+  background-image: url(/images/background.png);
+  background-repeat: no-repeat;
+  background-position-x: 85px;
 }
 
 .headline {
