@@ -1,5 +1,19 @@
-.product-card-wrapper {
+body {
   font-family: "Montserrat", sans-serif;
+}
+
+.headline {
+  font-size: 70px;
+  line-height: 78px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  margin: 220px 0 110px;
+
+color: #515076;
+}
+
+.product-card-wrapper {
   display: flex;
   justify-content: center;
   gap: 45px;
