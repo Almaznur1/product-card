@@ -3,7 +3,6 @@ body {
   background-image: url(/images/background.png);
   background-repeat: no-repeat;
   background-position-x: 85px;
-  
 }
 
 .headline {
@@ -14,8 +13,7 @@ body {
   justify-content: center;
   text-align: center;
   margin: 220px 0 110px 85px;;
-
-color: #515076;
+  color: #515076;
 }
 
 .product-card-wrapper {
@@ -46,8 +44,8 @@ color: #515076;
   font-size: 12px;
   line-height: 24px;
   color: #A5A3B9;
-
 }
+
 .product-card__name {
   margin: 5px 25px 0;
   font-weight: 700;
