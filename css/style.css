@@ -1,0 +1,94 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url(/images/background.png);
+  background-repeat: no-repeat;
+  background-position-x: 85px;
+}
+
+.headline {
+  font-size: 70px;
+  line-height: 78px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 220px 0 110px 85px;;
+  color: #515076;
+}
+
+.product-card-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  flex-wrap: wrap;
+  max-width: 1110px;
+  margin-left: 85px;
+}
+
+.product-card {
+  box-sizing: border-box;
+  width: 340px;
+  max-height: 573px;
+  background-color: #F7F7FA;
+}
+
+.product-card__img {
+  display: block;
+  margin: 25px 25px 0;
+  width: 290px;
+}
+
+.product-card__for-skin {
+  text-transform: uppercase;
+  margin: 30px 25px 0;
+  font-size: 12px;
+  line-height: 24px;
+  color: #A5A3B9;
+}
+
+.product-card__name {
+  margin: 5px 25px 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #515076;
+}
+
+.product-card__descr {
+  margin: 5px 25px 0;
+  font-size: 13px;
+  line-height: 18px;
+  color: #515076;
+}
+
+.product-card__ingredients {
+  font-size: 13px;
+  line-height: 18px;
+  margin: 15px 25px 0;
+  color: #515076;
+}
+
+.product-card__list {
+  font-size: 13px;
+  line-height: 18px;
+  margin-top: 0;
+  color: #515076;
+}
+
+.product-card__elem {
+  list-style-type: circle;
+  margin-top: 5px;
+}
+
+.product-card__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #515076;
+}
+
+.product-card__price-text {
+  font-weight: 700;
+}
