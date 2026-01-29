@@ -1,50 +1,68 @@
 .product-card-wrapper {
   font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .product-card {
+  box-sizing: border-box;
+  width: 340px;
+  max-height: 573px;
   background-color: #F7F7FA;
+  /* border: 2px solid red; */
 }
 
 .product-card__img {
-
+  display: block;
+  margin: 25px 25px 0;
+  width: 290px;
 }
-.prouct-card__for-skin {
-  font-family: 'Montserrat';
+
+.product-card__for-skin {
   text-transform: uppercase;
+  margin: 25px 30px 0;
   line-height: 24px;
   color: #A5A3B9;
 
 }
-.prouct-card__name {
+.product-card__name {
+  margin: 5px 25px 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 27px;
   color: #515076;
 }
 
-.prouct-card__descr {
+.product-card__descr {
+  margin: 5px 25px 0;
   font-size: 13px;
   line-height: 18px;
   color: #515076;
 }
 
-.prouct-card__list {
+.product-card__list {
+  margin: 15px 0 0;
   font-size: 13px;
   line-height: 18px;
   color: #515076;
 }
 
-.prouct-card__elem {
+.product-card__ingredients {
+}
+
+.product-card__elem {
   list-style-type: circle;
 }
 
-.prouct-card__price {
+.product-card__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 25px 25px 25px;
   font-size: 20px;
   line-height: 24px;
   color: #515076;
 }
 
-.prouct-card__price-text {
+.product-card__price-text {
   font-weight: 700;
 }
