@@ -1,6 +1,8 @@
 .product-card-wrapper {
   font-family: "Montserrat", sans-serif;
   display: flex;
+  justify-content: center;
+  gap: 45px;
   flex-wrap: wrap;
 }
 
@@ -9,7 +11,6 @@
   width: 340px;
   max-height: 573px;
   background-color: #F7F7FA;
-  /* border: 2px solid red; */
 }
 
 .product-card__img {
@@ -20,7 +21,8 @@
 
 .product-card__for-skin {
   text-transform: uppercase;
-  margin: 25px 30px 0;
+  margin: 30px 25px 0;
+  font-size: 12px;
   line-height: 24px;
   color: #A5A3B9;
 
@@ -40,24 +42,29 @@
   color: #515076;
 }
 
-.product-card__list {
-  margin: 15px 0 0;
+.product-card__ingredients {
   font-size: 13px;
   line-height: 18px;
+  margin: 15px 25px 0;
   color: #515076;
 }
 
-.product-card__ingredients {
+.product-card__list {
+  font-size: 13px;
+  line-height: 18px;
+  margin-top: 0;
+  color: #515076;
 }
 
 .product-card__elem {
   list-style-type: circle;
+  margin-top: 5px;
 }
 
 .product-card__price-wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 15px 25px 25px 25px;
+  margin: 25px;
   font-size: 20px;
   line-height: 24px;
   color: #515076;
