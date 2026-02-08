@@ -3,7 +3,7 @@
 const firstCardRecolorButton = document.querySelector('#first-card-recolor-button');
 const firstCard = document.querySelector('.product-card');
 const blueHash = '#0000ff';
-firstCardRecolorBtn.addEventListener('click', () => {
+firstCardRecolorButton.addEventListener('click', () => {
     firstCard.style.backgroundColor = blueHash;
 });
 
@@ -12,7 +12,7 @@ firstCardRecolorBtn.addEventListener('click', () => {
 const allCardsRecolorButton = document.querySelector('#all-cards-recolor-button');
 const allCards = document.querySelectorAll('.product-card');
 const greenHash = '#00ff44';
-allCardsRecolorBtn.addEventListener('click', () => {
+allCardsRecolorButton.addEventListener('click', () => {
     allCards.forEach(
         card => card.style.backgroundColor = greenHash
     );
