@@ -5,6 +5,18 @@ body {
   background-position-x: 85px;
 }
 
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  flex-wrap: wrap;  
+  max-width: 1110px;
+}
+
+.colored {
+  background-color: #b6b9ce;
+}
+
 .headline {
   font-size: 70px;
   line-height: 78px;
@@ -22,6 +34,7 @@ body {
   gap: 45px;
   flex-wrap: wrap;
   max-width: 1110px;
+  margin-top: 20px;
   margin-left: 85px;
 }
 
