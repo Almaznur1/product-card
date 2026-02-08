@@ -1,22 +1,22 @@
 // покраска первой карточки
 
-const recolorFirstCardButton = document.querySelector('#recolor-first-card-button');
+const firstCardRecolorButton = document.querySelector('#first-card-recolor-button');
 const firstCard = document.querySelector('.product-card');
 const blueHash = '#0000ff';
-recolorFirstCardButton.addEventListener('click', () => {
+firstCardRecolorBtn.addEventListener('click', () => {
     firstCard.style.backgroundColor = blueHash;
-})
+});
 
 // покраска всех карточек
 
-const recolorAllCardsButton = document.querySelector('#recolor-all-cards-button');
+const allCardsRecolorButton = document.querySelector('#all-cards-recolor-button');
 const allCards = document.querySelectorAll('.product-card');
 const greenHash = '#00ff44';
-recolorAllCardsButton.addEventListener('click', () => {
+allCardsRecolorBtn.addEventListener('click', () => {
     allCards.forEach(
         card => card.style.backgroundColor = greenHash
-    )
-})
+    );
+});
 
 // переход на страницу google
 
@@ -27,8 +27,8 @@ function openGoogle () {
         window.open('https://google.com');
     } else {
         console.log('Пользователь отменил переход на google.com');
-    }
-}
+    };
+};
 
 openGoogleButton.addEventListener('click', openGoogle);
 
@@ -37,7 +37,7 @@ openGoogleButton.addEventListener('click', openGoogle);
 const headline = document.querySelector('.headline');
 function displayHeadline () {
     console.log(headline.innerText);
-}
+};
 
 headline.addEventListener('mouseover', displayHeadline);
 
@@ -47,10 +47,10 @@ const recolorButtonsButton = document.querySelector('#recolor-buttons-button');
 const buttons = document.querySelectorAll('button');
 buttons.forEach(
     button => button.classList.add('colored')
-)
+);
     
 recolorButtonsButton.addEventListener('click', () => {
     buttons.forEach(
         button => button.classList.toggle('colored')
-    )
-})
+    );
+});
