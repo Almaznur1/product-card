@@ -5,6 +5,7 @@
 function showTemperature(city, temperature) {
   console.log(`Сейчас в ${city} температура  — ${temperature}  градусов по Цельсию`);
 }
+showTemperature('Kazan', -10);
 
 
 /*  2. Создать переменную, которая хранит внутри себя скорость света.
@@ -14,6 +15,7 @@ function showTemperature(city, temperature) {
     если ниже — "Субсветовая  скорость"? если равна — "Скорость света"*/
 
 const LIGHT_SPEED = 299_792_458;
+
 function compareWithLightSpeed(speed) {
   if (speed === LIGHT_SPEED) {
     console.log('Скорость света');
@@ -23,6 +25,9 @@ function compareWithLightSpeed(speed) {
     console.log('Сверхсветовая скорость');
   }
 }
+compareWithLightSpeed(300_000_000);
+compareWithLightSpeed(300_000_00);
+compareWithLightSpeed(299_792_458);
 
 
 /*  3. Создать переменную №1, которая содержит продукт и переменную №2,
@@ -35,13 +40,17 @@ function compareWithLightSpeed(speed) {
 
 const prouctName = 'book';
 const productCost = 100;
-function buyProduct(budget) {
+
+function purchaseProduct(budget) {
   if (productCost <= budget) {
     console.log(`Товар ${prouctName} приобретён. Спасибо за покупку!`);
   } else {
     console.log(`Вам не хватает ${productCost - budget}$, пополните баланс`);
   }
 }
+purchaseProduct(200);
+purchaseProduct(100);
+purchaseProduct(55);
 
 
 /*  4. Создать 1 функцию и именовать её по своему усмотрению*/
