@@ -14,7 +14,7 @@ showTemperature('Kazan', -10);
     выше скорости света — выводим лог "Сверхсветовая скорость",
     если ниже — "Субсветовая  скорость"? если равна — "Скорость света"*/
 
-const LIGHT_SPEED = 299_792_458;
+const LIGHT_SPEED = 299792458;
 
 function compareWithLightSpeed(speed) {
   if (speed === LIGHT_SPEED) {
@@ -25,9 +25,9 @@ function compareWithLightSpeed(speed) {
     console.log('Сверхсветовая скорость');
   }
 }
-compareWithLightSpeed(300_000_000);
-compareWithLightSpeed(300_000_00);
-compareWithLightSpeed(299_792_458);
+compareWithLightSpeed(300000000);
+compareWithLightSpeed(30000000);
+compareWithLightSpeed(299792458);
 
 
 /*  3. Создать переменную №1, которая содержит продукт и переменную №2,
