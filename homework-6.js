@@ -33,14 +33,13 @@ auto.owner = user;
 Она проверяет, есть ли в объекте свойство "максимальная скорость", если нет - добавляет его и задает значение,
 если есть - прекращает выполнение (ничего не делает)*/
 
-const property = 'maxSpeed';
-function addPropertyIfNotExist(obj, property){
-  if (!(property in obj)) {
-    obj[property] = 160;
+function setMaxSpeed(obj) {
+  if (!('maxSpeed' in obj)) {
+    obj['maxSpeed'] = 160;
   }
 }
 
-addPropertyIfNotExist(auto, property);
+setMaxSpeed(auto);
 console.log(auto);
 
 
@@ -86,7 +85,7 @@ let books = [
     coverColor: 'red',
     genre: 'psychology',
   },
-]
+];
 
 books.push({
   title: 'Clean Code',
@@ -124,7 +123,7 @@ const lordOFRingsBooks = [
     coverColor: 'red',
     genre: 'fantasy',
   },
-]
+];
 
 books = [...books, ...lordOFRingsBooks];
 console.log(books);
@@ -136,7 +135,7 @@ console.log(books);
 если книга выпущена позже 2000 года, устанавливаем true (да, это редкий), нет - false (значит это не редкий).*/
 
 function addIsModernProperty(arr) {
-  arr.map(book => book['isModern'] = book.year >= 2000 ? true : false);
+  arr.map(book => book['isModern'] = book.year >= 2000);
 }
 
 addIsModernProperty(books);
