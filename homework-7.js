@@ -67,7 +67,7 @@ const newComments3 = comments.map(comment => {
 /*10. Перебираем массив, добавляем объектам свойство isInvalid и проверяем: если длина тела сообщения (body) больше 180 символов - устанавливаем true, меньше - false.*/
 
 const newComments4 = comments.map(comment => {
-  return { ...comment, isInvalid: comment.body.length > 180 ? true : false};
+  return { ...comment, isInvalid: comment.body.length > 180};
 });
 
 
