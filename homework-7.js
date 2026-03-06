@@ -3,7 +3,7 @@ import { comments } from "./comments.js";
 /*2. Создать массив чисел от 1 до 10. Отфильтровать его таким образом, что бы мы получил массив чисел, начиная с 5.*/
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const newNumbers = numbers.filter(number => number >= 5);
+const filteredNumbers = numbers.filter(number => number >= 5);
 
 
 /*3. Создать массив строк, относящихся к любой сущности (название фильмов/книг, кухонные приборы, мебель и т.д.),
@@ -46,42 +46,42 @@ reverseArray(books);
 
 /*7. Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"*/
 
-const newComments = comments.filter(comment => comment.email.includes('.com'));
-console.log(newComments);
+const dotComEmailComments = comments.filter(comment => comment.email.includes('.com'));
+console.log(dotComEmailComments);
 
 
 /*8. Перебрать массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2, а те, у кого id больше 5, имели postId: 1*/
 
-const newComments2 = comments.map(comment => {
+const modifiedComments = comments.map(comment => {
   return { ...comment, postId: comment.id <= 5 ? 2 : 1 };
 });
 
 
 /*9. Перебрать массив, что бы объекты состояли только из айди и имени*/
 
-const newComments3 = comments.map(comment => {
-  return { id: comment.id, postId: comment.postId };
+const commentNames = comments.map(comment => {
+  return { id: comment.id, name: comment.name };
 });
 
 
 /*10. Перебираем массив, добавляем объектам свойство isInvalid и проверяем: если длина тела сообщения (body) больше 180 символов - устанавливаем true, меньше - false.*/
 
-const newComments4 = comments.map(comment => {
+const commentsWithValidation = comments.map(comment => {
   return { ...comment, isInvalid: comment.body.length > 180};
 });
 
 
 /*11. Почитать про метод массива reduce. Используя его, вывести массив почт и провернуть тоже самое с помощью метода map*/
 
-const emails1 = comments.reduce((acc, comment) => {
+const emails = comments.reduce((acc, comment) => {
   acc.push(comment.email);
   return acc;
 }, [])
 
-const emails2 = comments.map(comment => comment.email);
+const userEmails = comments.map(comment => comment.email);
 
 
 /*12. Почитать про методы toString(), join() и перебрав массив с задания №11, привести его к строке.*/
 
-console.log(emails1.toString());
-console.log(emails1.join(', '));
+console.log(emails.toString());
+console.log(userEmails.join(', '));
