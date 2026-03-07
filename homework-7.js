@@ -67,7 +67,7 @@ const commentNames = comments.map(comment => {
 /*10. Перебираем массив, добавляем объектам свойство isInvalid и проверяем: если длина тела сообщения (body) больше 180 символов - устанавливаем true, меньше - false.*/
 
 const commentsWithValidation = comments.map(comment => {
-  return { ...comment, isInvalid: comment.body.length > 180};
+  return { ...comment, isInvalid: comment.body.length > 180 };
 });
 
 
@@ -76,7 +76,7 @@ const commentsWithValidation = comments.map(comment => {
 const emails = comments.reduce((acc, comment) => {
   acc.push(comment.email);
   return acc;
-}, [])
+}, []);
 
 const userEmails = comments.map(comment => comment.email);
 
