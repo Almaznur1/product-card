@@ -53,21 +53,30 @@ console.log(dotComEmailComments);
 /*8. Перебрать массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2, а те, у кого id больше 5, имели postId: 1*/
 
 const modifiedComments = comments.map(comment => {
-  return { ...comment, postId: comment.id <= 5 ? 2 : 1 };
+  return {
+    ...comment,
+    postId: comment.id <= 5 ? 2 : 1
+  };
 });
 
 
 /*9. Перебрать массив, что бы объекты состояли только из айди и имени*/
 
 const commentNames = comments.map(comment => {
-  return { id: comment.id, name: comment.name };
+  return {
+    id: comment.id,
+    name: comment.name
+  };
 });
 
 
 /*10. Перебираем массив, добавляем объектам свойство isInvalid и проверяем: если длина тела сообщения (body) больше 180 символов - устанавливаем true, меньше - false.*/
 
 const commentsWithValidation = comments.map(comment => {
-  return { ...comment, isInvalid: comment.body.length > 180 };
+  return {
+    ...comment,
+    isInvalid: comment.body.length > 180
+  };
 });
 
 
