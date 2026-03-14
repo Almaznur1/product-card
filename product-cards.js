@@ -3,7 +3,7 @@ export const productCards = [
     name: "Увлажняющий мусс",
     descr: "Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.",
     forSkin: "Для нормальной кожи",
-    img: "images/moisturizing-mousse.png",
+    img: "moisturizing-mousse.png",
     ingredients: [
       "активные натуральные комплексы",
       "витамины С, А, РР, В И Е",
@@ -15,7 +15,7 @@ export const productCards = [
     name: "Увлажняющая маска",
     descr: "Способствует удерживанию влаги в верхних слоях кожи.",
     forSkin: "Для нормальной кожи",
-    img: "images/moisturizing-mask.png",
+    img: "moisturizing-mask.png",
     ingredients: [
       "воски",
       "минералы",
@@ -27,7 +27,7 @@ export const productCards = [
     name: "Гель для умывания",
     descr: "Интенсивно очищает, не повреждает защитный барьер кожи.",
     forSkin: "Для нормальной кожи",
-    img: "images/cleansing-gel.png",
+    img: "cleansing-gel.png",
     ingredients: [
       "минералы",
       "витамины С, А, РР, В И Е",
@@ -39,7 +39,7 @@ export const productCards = [
     name: "Подарочный набор №1",
     descr: "Набор, состоящий из увлажняющего крема и маски.",
     forSkin: "Для нормальной кожи",
-    img: "images/gift-set-1.png",
+    img: "gift-set-1.png",
     ingredients: [
       "воски",
       "минералы",
@@ -51,7 +51,7 @@ export const productCards = [
     name: "Подарочный набор №5",
     descr: "Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.",
     forSkin: "Для нормальной кожи",
-    img: "images/gift-set-5.png",
+    img: "gift-set-5.png",
     ingredients: [
       "воски",
       "минералы",
