@@ -26,29 +26,33 @@ const products = productCards.reduce((acc, product) => {
 P.S. - визуально, карточки у вас не должны поменяться вообще.
 */
 
-const cardsPerPage = getCardsCount();
-showCards(cardsPerPage);
+const cardsPerPageCount = getCardsCount();
+const cardsPerPage = productCards.slice();
+cardsPerPage.splice(cardsPerPageCount);
+renderCards(cardsPerPage);
 
 function getCardsCount() {
   while (true) {
-    const cardsPerPage = +prompt("Сколько карточек отобразить? От 1 до 5");
-    if (cardsPerPage >= 1 && cardsPerPage <= 5) {
-      return cardsPerPage;
+    const cardsPerPageCount = +prompt("Сколько карточек отобразить? От 1 до 5");
+    if (cardsPerPageCount >= 1 && cardsPerPageCount <= 5) {
+      return cardsPerPageCount;
     } else {
       alert("Введите число от 1 до 5");
     }
   }
 }
-function showCards(cardsPerPage) {
+function renderCards(cardsPerPage) {
   const productCardWrapper = document.querySelector(".product-card-wrapper");
   const productCardTemplate = document.querySelector(".product-card-template");
-  productCards.splice(cardsPerPage);
 
-  productCards.forEach((productCard) => {
+  cardsPerPage.forEach((productCard) => {
     const productCardClone = productCardTemplate.content.cloneNode(true);
-    productCardClone.querySelector(".product-card__img").src += productCard.img;
+    const img = productCardClone.querySelector(".product-card__img").src.split(" ");
+    const imgPath = img[0];
+    const imgExtension = img[1];
+    productCardClone.querySelector(".product-card__img").src = imgPath + productCard.img + imgExtension;
     productCardClone.querySelector(".product-card__img").alt = productCard.name;
-    productCardClone.querySelector(".product-card__for-skin").textContent = productCard.forSkin;
+    productCardClone.querySelector(".product-card__skin-type").textContent = productCard.skinType;
     productCardClone.querySelector(".product-card__name").textContent = productCard.name;
     productCardClone.querySelector(".product-card__descr").textContent = productCard.descr;
     productCard.ingredients.forEach((ingredient) => {

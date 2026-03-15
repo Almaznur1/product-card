@@ -51,7 +51,7 @@ body {
   width: 290px;
 }
 
-.product-card__for-skin {
+.product-card__skin-type {
   text-transform: uppercase;
   margin: 30px 25px 0;
   font-size: 12px;
