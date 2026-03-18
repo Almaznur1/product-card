@@ -26,9 +26,8 @@ const products = productCards.reduce((acc, product) => {
 P.S. - визуально, карточки у вас не должны поменяться вообще.
 */
 
-const cardsPerPageCount = getCardsCount();
 const cardsPerPage = productCards.slice();
-cardsPerPage.splice(cardsPerPageCount);
+cardsPerPage.splice(getCardsCount());
 renderCards(cardsPerPage);
 
 function getCardsCount() {
@@ -47,10 +46,7 @@ function renderCards(cardsPerPage) {
 
   cardsPerPage.forEach((productCard) => {
     const productCardClone = productCardTemplate.content.cloneNode(true);
-    const img = productCardClone.querySelector(".product-card__img").src.split(" ");
-    const imgPath = img[0];
-    const imgExtension = img[1];
-    productCardClone.querySelector(".product-card__img").src = imgPath + productCard.img + imgExtension;
+    productCardClone.querySelector(".product-card__img").src = "images/" + productCard.img + ".png";
     productCardClone.querySelector(".product-card__img").alt = productCard.name;
     productCardClone.querySelector(".product-card__skin-type").textContent = productCard.skinType;
     productCardClone.querySelector(".product-card__name").textContent = productCard.name;
@@ -61,8 +57,7 @@ function renderCards(cardsPerPage) {
       li.textContent = ingredient;
       productCardClone.querySelector(".product-card__ingredients-list").appendChild(li);
     });
-    const currency = productCardClone.querySelector(".product-card__price").textContent;
-    productCardClone.querySelector(".product-card__price").textContent = productCard.price + currency;
+    productCardClone.querySelector(".product-card__price").textContent = productCard.price + " ₽";
     productCardWrapper.appendChild(productCardClone);
   });
 }
