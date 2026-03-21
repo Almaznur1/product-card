@@ -26,18 +26,17 @@ const products = productCards.reduce((acc, product) => {
 P.S. - визуально, карточки у вас не должны поменяться вообще.
 */
 
-const cardsPerPage = productCards.slice();
-cardsPerPage.splice(getCardsCount());
-renderCards(cardsPerPage);
+window.addEventListener('load', () => {
+  productCards.splice(getCardsCount());
+  renderCards(productCards);
+});
 
 function getCardsCount() {
-  while (true) {
-    const cardsPerPageCount = +prompt("Сколько карточек отобразить? От 1 до 5");
-    if (cardsPerPageCount >= 1 && cardsPerPageCount <= 5) {
-      return cardsPerPageCount;
-    } else {
-      alert("Введите число от 1 до 5");
-    }
+  const cardsPerPageCount = +prompt("Сколько карточек отобразить? От 1 до 5");
+  if (cardsPerPageCount >= 1 && cardsPerPageCount <= 5) {
+    return cardsPerPageCount;
+  } else {
+    return getCardsCount();
   }
 }
 function renderCards(cardsPerPage) {
