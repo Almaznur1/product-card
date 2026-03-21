@@ -51,7 +51,7 @@ body {
   width: 290px;
 }
 
-.product-card__for-skin {
+.product-card__skin-type {
   text-transform: uppercase;
   margin: 30px 25px 0;
   font-size: 12px;
@@ -81,14 +81,14 @@ body {
   color: #515076;
 }
 
-.product-card__list {
+.product-card__ingredients-list {
   font-size: 13px;
   line-height: 18px;
   margin-top: 0;
   color: #515076;
 }
 
-.product-card__elem {
+.product-card__ingredients-elem {
   list-style-type: circle;
   margin-top: 5px;
 }
