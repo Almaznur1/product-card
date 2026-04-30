@@ -1,18 +1,19 @@
 "use strict";
 
 /*
-3. Сверстать данный footer (https://www.figma.com/design/H8BBp1sq6u6N0MqdF9hrsq/Untitled?node-id=0-1&t=xbP3bxfa7ojVOSJk-1), используя семантические теги (footer, nav и т.д.)
-*/
-
-
-
-/*
 4. К Форме, которая прикреплена в футере - добавить логику:
 email должен соответствовать стандартам (добавить валидацию), если он не заполнен - форма не отправляется.
 Кнопка "Подписаться" и есть "отправкой формы", при нажатии на которую мы будем выводить консоль лог в виде объекта:  { email: 'введенная почта' }
 */
 
-
+const emailForm = document.querySelector("#email-form");
+emailForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    console.log(data);
+});
 
 /*
 5. Создать кнопку "Регистрация". Создать модальное окно, используя классы "modal, modal-showed".
@@ -23,7 +24,20 @@ email должен соответствовать стандартам (доба
 2) Модальное окно находиться ровно по центру страницы, независимо от масштаба
 */
 
+const modal = document.querySelector("#modal-window");
+const btn = document.querySelector("#registration");
+const span = document.querySelector(".close-button");
+const overlay = document.querySelector(".overlay");
 
+btn.onclick = () => {
+  modal.classList.add("modal-showed");
+  overlay.style.display = "block";
+};
+
+span.onclick = () => {
+  modal.classList.remove("modal-showed");
+  overlay.style.display = "none";
+};
 
 /*
 6. Создать форму для регистрации внутри модального окна. Она должна содержать поля: имя, фамилия, дата рождения, логин, пароль, повторение пароля.
@@ -36,7 +50,27 @@ email должен соответствовать стандартам (доба
 Также создайте внешнюю переменную user и присвойте ей этот объект. После успешной регистрации - модалка должны закрыться.
 */
 
+const registrationForm = document.querySelector(".registration-form");
 
+registrationForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const form = event.target;
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+  data.createdOn = new Date();
+
+
+  if (data.password !== data["repeat-password"]) {
+    alert("Введённые пароли не совпадают!");
+  } else if (!form.checkValidity()) {
+    alert("Форма регистрации заполнена неверно!");
+  } else {
+    const user = data;
+    console.log(user);
+    modal.classList.remove("modal-showed");
+    overlay.style.display = "none";
+  }
+});
 
 /*
 7. Добавить к пулл-реквесту видео с работой форм, модального окна и сверстанного футера.
