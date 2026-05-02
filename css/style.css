@@ -16,6 +16,10 @@ body {
   z-index: 9;
 }
 
+.overlay-showed {
+  display: block;
+}
+
 .modal {
   display: none;
   width: 40%;

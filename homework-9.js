@@ -29,15 +29,15 @@ const btn = document.querySelector("#registration");
 const span = document.querySelector(".close-button");
 const overlay = document.querySelector(".overlay");
 
-btn.onclick = () => {
+btn.addEventListener("click", () => {
   modal.classList.add("modal-showed");
-  overlay.style.display = "block";
-};
+  overlay.classList.add("overlay-showed");
+});
 
-span.onclick = () => {
+span.addEventListener("click", () => {
   modal.classList.remove("modal-showed");
-  overlay.style.display = "none";
-};
+  overlay.classList.remove("overlay-showed");
+});
 
 /*
 6. Создать форму для регистрации внутри модального окна. Она должна содержать поля: имя, фамилия, дата рождения, логин, пароль, повторение пароля.
@@ -58,6 +58,7 @@ registrationForm.addEventListener("submit", (event) => {
   const formData = new FormData(form);
   const data = Object.fromEntries(formData.entries());
   data.createdOn = new Date();
+  let user = null;
 
 
   if (data.password !== data["repeat-password"]) {
@@ -65,7 +66,7 @@ registrationForm.addEventListener("submit", (event) => {
   } else if (!form.checkValidity()) {
     alert("Форма регистрации заполнена неверно!");
   } else {
-    const user = data;
+    user = data;
     console.log(user);
     modal.classList.remove("modal-showed");
     overlay.style.display = "none";
