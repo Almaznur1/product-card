@@ -28,6 +28,8 @@ const modal = document.querySelector("#modal-window");
 const btn = document.querySelector("#registration");
 const span = document.querySelector(".close-button");
 const overlay = document.querySelector(".overlay");
+const registrationForm = document.querySelector(".registration-form");
+let user = null;
 
 btn.addEventListener("click", () => {
   modal.classList.add("modal-showed");
@@ -50,7 +52,6 @@ span.addEventListener("click", () => {
 Также создайте внешнюю переменную user и присвойте ей этот объект. После успешной регистрации - модалка должны закрыться.
 */
 
-const registrationForm = document.querySelector(".registration-form");
 
 registrationForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -58,8 +59,6 @@ registrationForm.addEventListener("submit", (event) => {
   const formData = new FormData(form);
   const data = Object.fromEntries(formData.entries());
   data.createdOn = new Date();
-  let user = null;
-
 
   if (data.password !== data["repeat-password"]) {
     alert("Введённые пароли не совпадают!");
@@ -69,7 +68,7 @@ registrationForm.addEventListener("submit", (event) => {
     user = data;
     console.log(user);
     modal.classList.remove("modal-showed");
-    overlay.style.display = "none";
+    overlay.classList.remove("overlay-showed");
   }
 });
 
