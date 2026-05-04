@@ -10,13 +10,41 @@
   <title>Product card</title>
 </head>
 <body>
+  <div class="overlay"></div>
   <h1 class="headline">Выбери свой продукт</h1>
   <div class="buttons-wrapper">
     <button id="first-card-recolor-button">Перекрасить первую карточку</button>
     <button id="all-cards-recolor-button">Перекрасить все карточки</button>
     <button id="open-google-button">Открыть google.com</button>
     <button id="recolor-buttons-button">Изменить цвет кнопок</button>
+    <button id="registration">Регистрация</button>
   </div>
+
+  <div id="modal-window" class="modal">
+    <form class="registration-form">
+      <label>Имя пользователя
+        <input id="name" name="name" type="text" placeholder="Введите имя..." required>
+      </label>
+      <label>Фамилия
+        <input id="surname" name="surname" type="text" placeholder="Введите фамилию..." required>
+      </label>
+      <label>Дата рождения
+        <input id="birthdate" name="birthdate" type="date" placeholder="Введите дату рождения..." required>
+      </label>
+      <label>Логин
+        <input id="login" name="login" type="text" placeholder="Введите логин..." required>
+      </label>
+      <label>Пароль
+        <input id="password" name="password" type="password" placeholder="Введите пароль..." required>
+      </label>
+      <label>Повторите пароль
+        <input id="repeat-password" name="repeat-password" type="password" placeholder="Повторите пароль..." required>
+      </label>
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+    <span class="close-button">&times;</span>
+  </div>
+
   <div class="product-card-wrapper"></div>
   <template class="product-card-template">
     <div class="product-card">
@@ -32,9 +60,62 @@
       </div>
     </div>
   </template>
+
+  <footer>
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="footer-logo">Product Cards</div>
+        <p>У Нас Самые Лучшие Продукты Для Кожи!</p>
+        <div class="footer-socials">
+          <a href="#">
+            <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.9379 1.60272L17.7692 16.5465C17.5299 17.601 16.9067 17.8635 16.0209 17.367L11.1924 13.809L8.86293 16.05C8.60493 16.308 8.38968 16.5232 7.89243 16.5232L8.23968 11.6062L17.1879 3.52047C17.5772 3.17397 17.1032 2.98122 16.5834 3.32847L5.52093 10.2945L0.758428 8.80347C-0.277322 8.48022 -0.296072 7.76772 0.974428 7.27047L19.6022 0.0937215C20.4647 -0.229529 21.2192 0.285721 20.9379 1.60347V1.60272Z" fill="white"/>
+            </svg>
+          </a>
+          <a href="#">
+            <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M23.45 0.948C23.616 0.402 23.45 0 22.655 0H20.03C19.362 0 19.054 0.347 18.887 0.73C18.887 0.73 17.552 3.926 15.661 6.002C15.049 6.604 14.771 6.795 14.437 6.795C14.27 6.795 14.019 6.604 14.019 6.057V0.948C14.019 0.292 13.835 0 13.279 0H9.151C8.734 0 8.483 0.304 8.483 0.593C8.483 1.214 9.429 1.358 9.526 3.106V6.904C9.526 7.737 9.373 7.888 9.039 7.888C8.149 7.888 5.984 4.677 4.699 1.003C4.45 0.288 4.198 0 3.527 0H0.9C0.15 0 0 0.347 0 0.73C0 1.412 0.89 4.8 4.145 9.281C6.315 12.341 9.37 14 12.153 14C13.822 14 14.028 13.632 14.028 12.997V10.684C14.028 9.947 14.186 9.8 14.715 9.8C15.105 9.8 15.772 9.992 17.33 11.467C19.11 13.216 19.403 14 20.405 14H23.03C23.78 14 24.156 13.632 23.94 12.904C23.702 12.18 22.852 11.129 21.725 9.882C21.113 9.172 20.195 8.407 19.916 8.024C19.527 7.533 19.638 7.314 19.916 6.877C19.916 6.877 23.116 2.451 23.449 0.948H23.45Z" fill="white"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-subscribe">
+        <h3>Подпишись на наши акции:</h3>
+        <form id="email-form" class="subscribe-form">
+          <input name="email" type="email" placeholder="Введи Email..." required>
+          <div class="subscribe-divider"></div>
+          <button type="submit">Подписаться</button>
+        </form>
+      </div>
+
+      <nav class="footer-links">
+        <h4>Быстрые ссылки</h4>
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Магазин</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+      <svg width="66" height="1" viewBox="0 0 66 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line y1="0.5" x2="66" y2="0.5" stroke="white"/>
+      </svg>
+    </div>
+    <div class="footer-bottom">
+      www.product-cards.com©all rights reserved
+    </div>
+  </footer>
+
+
   <script src="script.js"></script>
   <script src="homework-6.js"></script>
   <script src="homework-7.js" type="module"></script>
   <script src="homework-8.js" type="module"></script>
+  <script src="homework-9.js"></script>
 </body>
 </html>
