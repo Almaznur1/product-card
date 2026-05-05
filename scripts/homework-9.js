@@ -1,5 +1,8 @@
 "use strict";
 
+import { Modal } from "./modal.js";
+import { Form } from "./form.js";
+
 /*
 4. К Форме, которая прикреплена в футере - добавить логику:
 email должен соответствовать стандартам (добавить валидацию), если он не заполнен - форма не отправляется.
@@ -24,21 +27,12 @@ emailForm.addEventListener("submit", (event) => {
 2) Модальное окно находиться ровно по центру страницы, независимо от масштаба
 */
 
-const modal = document.querySelector("#modal-window");
+
+const registrationModal = new Modal("modal-window");
 const btn = document.querySelector("#registration");
-const span = document.querySelector(".close-button");
-const overlay = document.querySelector(".overlay");
-const registrationForm = document.querySelector(".registration-form");
-let user = null;
 
 btn.addEventListener("click", () => {
-  modal.classList.add("modal-showed");
-  overlay.classList.add("overlay-showed");
-});
-
-span.addEventListener("click", () => {
-  modal.classList.remove("modal-showed");
-  overlay.classList.remove("overlay-showed");
+  registrationModal.open();
 });
 
 /*
@@ -53,24 +47,21 @@ span.addEventListener("click", () => {
 */
 
 
-registrationForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const form = event.target;
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
-  data.createdOn = new Date();
+const registrationForm = new Form("registration-form");
+let user = null;
 
-  if (data.password !== data["repeat-password"]) {
-    alert("Введённые пароли не совпадают!");
-  } else if (!form.checkValidity()) {
-    alert("Форма регистрации заполнена неверно!");
+document.querySelector("#registration-form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (!registrationForm.isValid()) {
+    alert("Форма заполнена неверно или пароли не совпадают!");
   } else {
-    user = data;
+    user = registrationForm.getData();
     console.log(user);
-    modal.classList.remove("modal-showed");
-    overlay.classList.remove("overlay-showed");
+    registrationForm.clear();
+    registrationModal.close();
   }
 });
+
 
 /*
 7. Добавить к пулл-реквесту видео с работой форм, модального окна и сверстанного футера.

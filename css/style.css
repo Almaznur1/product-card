@@ -36,17 +36,17 @@ body {
   display: block;
 }
 
-.registration-form {
+#registration-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.registration-form label {
+#registration-form label {
   display: block;
 }
 
-.registration-form input {
+#registration-form input {
   width: 100%;
   box-sizing: border-box;
   height: 36px;
@@ -58,12 +58,12 @@ body {
   transition: border-color 0.15s;
 }
 
-.registration-form input:focus {
+#registration-form input:focus {
   border-color: rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
 }
 
-.registration-form button[type="submit"] {
+#registration-form button[type="submit"] {
   width: 100%;
   padding: 10px;
   font-size: 15px;
@@ -76,7 +76,7 @@ body {
   transition: opacity 0.15s;
 }
 
-.registration-form button[type="submit"]:hover {
+#registration-form button[type="submit"]:hover {
   opacity: 0.85;
 }
 

@@ -1,0 +1,6 @@
+import "./scripts/homework-6.js"
+import "./scripts//homework-7.js"
+import "./scripts//homework-8.js"
+import "./scripts//script.js"
+import "./scripts//homework-9.js"
+import "./scripts//homework-10.js"

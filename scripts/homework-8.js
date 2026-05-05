@@ -1,6 +1,6 @@
 "use strict";
 
-import { productCards } from "./product-cards.js";
+import { productCards } from "../product-cards.js";
 
 /*
 1. Как и в прошлых задания - создаем отдельный файл для homework-8 и подключаем его в HTML с атрибутом type = module (что бы работали импорты)
