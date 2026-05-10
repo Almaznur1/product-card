@@ -41,7 +41,7 @@ class Drink {
   }
 
   #prepare() {
-    this.setTemperature(this.temperature);
+    this.setTemperature(this.#temperature);
     console.log("Напиток готов!");
   }
 
@@ -101,8 +101,8 @@ class Cafe {
   }
 }
 
-coffee = new Coffee("cappuccino", "200ml", "200p", "60", "Brazil", "coffee beans");
-cafe = new Cafe("Caspi", "Moscow");
+const coffee = new Coffee("cappuccino", "200ml", "200p", "60", "Brazil", "coffee beans");
+const cafe = new Cafe("Caspi", "Moscow");
 
 console.log(cafe.getInfo());
 console.log(coffee.getInfo());
