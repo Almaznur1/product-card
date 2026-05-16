@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Cards</title>
+  <link rel="stylesheet" href="async.css">
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="loading-modal">Данные загружаются...</div>
+  <div class="buttons-wrapper">
+    <button id="get-all-cards">Показать все карточки</button>
+    <button id="delete-cards">Удалить все карточки</button>
+    <button id="delete-card">Удалить карточку по id</button>
+  </div>
+  <div class="user-card-wrapper"></div>
+  <template class="user-card-template">
+    <div class="user-card">
+      <div>id:
+        <span class="id"></span>
+      </div>
+      <div>имя:
+        <span class="name"></span>
+      </div>
+      <div>фамилия:
+        <span class="surname"></span>
+      </div>
+      <div>email:
+        <span class="email"></span>
+      </div>
+      <div>возраст:
+        <span class="age"></span>
+      </div>
+    </div>
+  </template>
+  <script src="async.js"></script>
+</body>
+</html>
