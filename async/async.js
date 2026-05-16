@@ -27,12 +27,14 @@
 
 // Стилизация по желанию
 
+const loadingModal = document.querySelector(".loading-modal");
+const overlay = document.querySelector(".overlay");
+
 main();
 
 async function main() {
   let users;
   if (!localStorage.getItem("users")) {
-    await showLoadingModal();
     users = await loadLocalJSON();
     localStorage.setItem("users", JSON.stringify(users));
   } else {
@@ -53,7 +55,7 @@ async function main() {
 
   deleteCardsButton = document.querySelector("#delete-cards");
   deleteCardsButton.addEventListener("click", () => {
-    localStorage.setItem("users", "");
+    localStorage.setItem("users", JSON.stringify([]));
     users = [];
     renderCards(users);
   });
@@ -67,12 +69,12 @@ async function main() {
   });
 }
 
-async function showLoadingModal() {
-  const loadingModal = document.querySelector(".loading-modal");
-  const overlay = document.querySelector(".overlay");
+function showLoadingModal(loadingModal, overlay) {
   loadingModal.classList.add("loading-modal-showed");
   overlay.classList.add("overlay-showed");
-  await delay(1000);
+}
+
+function hideLoadingModal(loadingModal, overlay) {
   loadingModal.classList.remove("loading-modal-showed");
   overlay.classList.remove("overlay-showed");
 }
@@ -83,7 +85,10 @@ function delay(ms) {
 
 async function loadLocalJSON() {
   try {
+    showLoadingModal(loadingModal, overlay);
+    await delay(1000);
     const response = await fetch("./users.json");
+    hideLoadingModal(loadingModal, overlay);
     if (!response.ok) {
       throw new Error("Не удалось получить данные");
     }
